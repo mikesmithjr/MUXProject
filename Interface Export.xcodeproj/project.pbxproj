@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02AA5E0B14D57AF2004CE70D /* Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AA5E0614D57AF2004CE70D /* Gradient.m */; };
+		02AA5E0C14D57AF2004CE70D /* GradientNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AA5E0814D57AF2004CE70D /* GradientNode.m */; };
+		02AA5E0D14D57AF2004CE70D /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AA5E0A14D57AF2004CE70D /* GradientView.m */; };
+		02AA5E3814D59768004CE70D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02AA5E3714D59768004CE70D /* CoreLocation.framework */; };
+		02AA5E3C14D597DB004CE70D /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AA5E3B14D597DB004CE70D /* MKMapView+ZoomLevel.m */; };
+		02C8A2B514C97CA60021F408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8A2B414C97CA60021F408 /* UIKit.framework */; };
+		02C8A2B714C97CA60021F408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8A2B614C97CA60021F408 /* Foundation.framework */; };
+		02C8A2B914C97CA60021F408 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8A2B814C97CA60021F408 /* CoreGraphics.framework */; };
+		02C8A2BF14C97CA60021F408 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02C8A2BD14C97CA60021F408 /* InfoPlist.strings */; };
+		02C8A2C114C97CA60021F408 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C8A2C014C97CA60021F408 /* main.m */; };
+		02C8A2C514C97CA60021F408 /* IFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C8A2C414C97CA60021F408 /* IFAppDelegate.m */; };
+		02C8A2CC14C97CC00021F408 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8A2CB14C97CC00021F408 /* MapKit.framework */; };
+		02C8A2CE14C97CC80021F408 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C8A2CD14C97CC80021F408 /* QuartzCore.framework */; };
+		0AAC3358794C6F57C480EDC7 /* MedicineListViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 488B758CF400EAB7F2890021 /* MedicineListViewController_Image_1.png */; };
+		0B88E426A2A147DB0CFEE2B9 /* LogEntryViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 46F740CCA630129514D5F47C /* LogEntryViewController_Image_1.png */; };
+		0E4C79FA571F48481263D5B8 /* MainScreenViewController_Image_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 5992A778ED82F5DFC49B1DF1 /* MainScreenViewController_Image_10.png */; };
+		13B590E3D3B7E199A3713517 /* DoctorSInfoViewController_Image_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 70D40D9E86769E9AB82B8BFA /* DoctorSInfoViewController_Image_6.png */; };
+		13CDB2F947DAB1ED61B40AE6 /* MedicineListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA081859EBB875F2F2371D1E /* MedicineListViewController.m */; };
+		165520C896EB9F39E549810D /* EditDoctorSInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4493D44B66AA8B658954AC39 /* EditDoctorSInfoViewController.m */; };
+		1E051B94C3878A8A8AC04157 /* LogEntryViewController_Image_4.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A83E078441DDF681EFD782 /* LogEntryViewController_Image_4.png */; };
+		31E30CF0E44ACBBB3A11BF7D /* MainScreenViewController_Image_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0085BB746A58FBB14E28AE4F /* MainScreenViewController_Image_6.png */; };
+		3398E9698E13B96FFABDDA76 /* DoctorSInfoViewController_Image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = F741A6FD58AFCC5C97696EBE /* DoctorSInfoViewController_Image_3.png */; };
+		374028BBD5BA1FC9BE1A9697 /* SettingsViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 499BD74206D7B27992294988 /* SettingsViewController_Image_1.png */; };
+		384DDB59E64F991D189C442A /* MedicineListViewController_Image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E7A20E47532416127CE8358 /* MedicineListViewController_Image_3.png */; };
+		39648B79E722C05A9CFC8CE0 /* EditPersonalInfoViewController_Image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = D7C81EC40FF8A0DD0C84892B /* EditPersonalInfoViewController_Image_3.png */; };
+		3C8788279E1EF628843D0CD9 /* MedicineListViewController_Image_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 973C2843B811B3391123AF6F /* MedicineListViewController_Image_4.png */; };
+		3F85EBDC9A5D1AAB775A2106 /* MainScreenViewController_Image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 949DE5E6580D581DAF81FF73 /* MainScreenViewController_Image_2.png */; };
+		40FD0888A286FA7D14DB7E2B /* LogListViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE6CB265CCBF671A28C97FDC /* LogListViewController_Image_1.png */; };
+		41758DB162CBB16F60B71B2A /* DoctorSInfoViewController_Image_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 40713B64676696C6E8F0880D /* DoctorSInfoViewController_Image_8.png */; };
+		43B51AA94EC63CD24E6A93BB /* LogInViewController_Image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = D3200B76848A3631E47796DE /* LogInViewController_Image_3.png */; };
+		4EB7EF9B6C67A8B7484BFD3F /* MedicineListViewController_Image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A4E9D8B154CDE401709F8C95 /* MedicineListViewController_Image_2.png */; };
+		4FE1C2F9AAF97EF7177C2902 /* MainScreenViewController_Image_9.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B602FA5790C7CD5EAA5AEFD /* MainScreenViewController_Image_9.png */; };
+		519525A1E8E0CE2C9BF46EAB /* MainScreenViewController_Image_8.png in Resources */ = {isa = PBXBuildFile; fileRef = E1F7F4341A2994B852C16230 /* MainScreenViewController_Image_8.png */; };
+		52013DBEF6C2C78A79DF19BA /* SettingsViewController_Image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 13567D4DA8F0218FF6D7F80C /* SettingsViewController_Image_2.png */; };
+		52930BB45A8C1BB01F5B425F /* LogEntryViewController_Image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 627A37707FFD258F6A56C5FB /* LogEntryViewController_Image_3.png */; };
+		55CFC7424620B39F046BC7C4 /* LogInViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F8FD4D0F09AFC4CDD2B00549 /* LogInViewController_Image_1.png */; };
+		58D18AC317B912BDCE16678A /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09338D584760888C6C9036FC /* LogInViewController.m */; };
+		5E1311C4EC73B098EA36A488 /* LogInViewController_Image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = ED2FD27DD92A227D0976A5F2 /* LogInViewController_Image_2.png */; };
+		5F2315A0F8874357DDBEE0B9 /* DoctorSInfoViewController_Image_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 62C434AF1D0A53797B48DE57 /* DoctorSInfoViewController_Image_4.png */; };
+		61B59445E8239670C5C762D8 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC89DA7EE3BC369F0320A9A /* SettingsViewController.m */; };
+		691D3914C669E5BC10874A26 /* EditLogEntryViewController_Image_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCFD14DA7803EFF52457ACF /* EditLogEntryViewController_Image_4.png */; };
+		69F9288A3EE00628769E1188 /* MainScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56705054E5D7436F46B6A49F /* MainScreenViewController.m */; };
+		6E59C22D8CDE9C224DB63B60 /* MainScreenViewController_Image_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 55E492874EE3B82954668016 /* MainScreenViewController_Image_5.png */; };
+		6E72ABC0C65BCA5AB636BDAD /* EditPersonalInfoViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EFBA0A89B1A8F48AD5E226F /* EditPersonalInfoViewController_Image_1.png */; };
+		6F7B4CE35E918A568CC81EC3 /* ShareLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2C3D286611C71FCEA3539D /* ShareLogViewController.m */; };
+		71F157361F78280428007A14 /* DoctorSInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0257A58B0EFA7F5DEBA87C64 /* DoctorSInfoViewController.m */; };
+		7334F9F38EE73899CEF39052 /* EditLogEntryViewController_Image_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 467CFF5E798A9E4E0473D674 /* EditLogEntryViewController_Image_5.png */; };
+		764760506DEEF14B01600BEF /* EditPersonalInfoViewController_Image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = E4AD24399D767F455032BECE /* EditPersonalInfoViewController_Image_2.png */; };
+		84FD27986BFB69A4737FB29B /* LogEntryViewController_Image_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EFEFA2A3182A57738980BE7 /* LogEntryViewController_Image_5.png */; };
+		866B9BEF57D9D276AF520730 /* LogEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441FD180BB3DCCD93EA07645 /* LogEntryViewController.m */; };
+		8BA02FC734E5242A9B811AC5 /* MainScreenViewController_Image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1603AB6FD065E32471FBBC79 /* MainScreenViewController_Image_3.png */; };
+		903D4EBAEE97D8949274F6ED /* EditLogEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4238CA7065971C7885EE060 /* EditLogEntryViewController.m */; };
+		90AE753E5B919A536CDEDA19 /* ShareLogViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = E653EC3F141DFF358C8AA919 /* ShareLogViewController_Image_1.png */; };
+		91C261B5808F72E5B7052DD4 /* DoctorSInfoViewController_Image_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 715594226EFFA55C29232F40 /* DoctorSInfoViewController_Image_5.png */; };
+		99B6E802B52A666BAEE14100 /* MainScreenViewController_Image_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C2339CF730AD6B4E8A300C2 /* MainScreenViewController_Image_4.png */; };
+		A134013E9B726E7209DF2AE0 /* EditDoctorSInfoViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = FFDFCA583A190B50A3189129 /* EditDoctorSInfoViewController_Image_1.png */; };
+		A16D5731542894433A1A8BB7 /* MainScreenViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 13FC842CC76679D215B72C69 /* MainScreenViewController_Image_1.png */; };
+		A67F01A7A0D0E72AD2FB349F /* EditLogEntryViewController_Image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A9167581C0781B294A9408 /* EditLogEntryViewController_Image_2.png */; };
+		AC3666D17507AFB5B59C7DEA /* EditDoctorSInfoViewController_Image_4.png in Resources */ = {isa = PBXBuildFile; fileRef = C0B02B5727F250B3C73282D4 /* EditDoctorSInfoViewController_Image_4.png */; };
+		B6E6411F348950CD84F6CD2D /* EditDoctorSInfoViewController_Image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = D926D725D1E724025C6B665D /* EditDoctorSInfoViewController_Image_2.png */; };
+		BC157959C3A983646389D04F /* DoctorSInfoViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E9FD39CD9E4C79EC1046E3 /* DoctorSInfoViewController_Image_1.png */; };
+		C228F5F0653E4EC70A2447CE /* EditDoctorSInfoViewController_Image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0CC3649AAC1F8734A7CB5676 /* EditDoctorSInfoViewController_Image_3.png */; };
+		C373CAD49C9BAAA3C48070E0 /* DoctorSInfoViewController_Image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5199C95892737792E0345AD /* DoctorSInfoViewController_Image_2.png */; };
+		C3B3631A07F296FF14977658 /* LogInViewController_Image_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A126C3390AD187C0309756C /* LogInViewController_Image_4.png */; };
+		D3386E8A81B12685259F102E /* LogEntryViewController_Image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9959958290034392D192B855 /* LogEntryViewController_Image_2.png */; };
+		DD4B2C34A8430B434C36B863 /* EditLogEntryViewController_Image_1.png in Resources */ = {isa = PBXBuildFile; fileRef = B3BE659B186CC5487D62C296 /* EditLogEntryViewController_Image_1.png */; };
+		DE056426B1BC03001FC9EDE5 /* DoctorSInfoViewController_Image_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FEE7585534332C6AD8D495A /* DoctorSInfoViewController_Image_7.png */; };
+		E37E4142569DDB00C68102BC /* LogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28F7D29BD2F2A6C44113D03 /* LogListViewController.m */; };
+		F1826BB1032C175911E525B6 /* EditLogEntryViewController_Image_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 12469A6B8EE701185F96ECC7 /* EditLogEntryViewController_Image_3.png */; };
+		F2462A3965E8ADD384F98AC1 /* EditPersonalInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C95087D2993B3EE49FBC7199 /* EditPersonalInfoViewController.m */; };
+		F64D8FA07DBF8DCA87BC8E84 /* MainScreenViewController_Image_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 04229211C71F7725A3EAAD0B /* MainScreenViewController_Image_7.png */; };
+		F75DB0B0B2A771103CA0A91E /* EditPersonalInfoViewController_Image_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 53A88E15728C93A7E2A85E61 /* EditPersonalInfoViewController_Image_4.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0085BB746A58FBB14E28AE4F /* MainScreenViewController_Image_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreenViewController_Image_6.png; sourceTree = "<group>"; };
+		00BB766B49B998E823669888 /* ShareLogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareLogViewController.h; sourceTree = "<group>"; };
+		0257A58B0EFA7F5DEBA87C64 /* DoctorSInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoctorSInfoViewController.m; sourceTree = "<group>"; };
+		02AA5E0514D57AF2004CE70D /* Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gradient.h; sourceTree = "<group>"; };
+		02AA5E0614D57AF2004CE70D /* Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gradient.m; sourceTree = "<group>"; };
+		02AA5E0714D57AF2004CE70D /* GradientNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientNode.h; sourceTree = "<group>"; };
+		02AA5E0814D57AF2004CE70D /* GradientNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientNode.m; sourceTree = "<group>"; };
+		02AA5E0914D57AF2004CE70D /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		02AA5E0A14D57AF2004CE70D /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		02AA5E3714D59768004CE70D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		02AA5E3A14D597DB004CE70D /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
+		02AA5E3B14D597DB004CE70D /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
+		02C8A2B014C97CA60021F408 /* Interface Export.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Interface Export.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C8A2B414C97CA60021F408 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		02C8A2B614C97CA60021F408 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		02C8A2B814C97CA60021F408 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		02C8A2BC14C97CA60021F408 /* Interface Export-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Interface Export-Info.plist"; sourceTree = "<group>"; };
+		02C8A2BE14C97CA60021F408 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		02C8A2C014C97CA60021F408 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		02C8A2C214C97CA60021F408 /* Interface Export-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Interface Export-Prefix.pch"; sourceTree = "<group>"; };
+		02C8A2C314C97CA60021F408 /* IFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFAppDelegate.h; sourceTree = "<group>"; };
+		02C8A2C414C97CA60021F408 /* IFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFAppDelegate.m; sourceTree = "<group>"; };
+		02C8A2CB14C97CC00021F408 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		02C8A2CD14C97CC80021F408 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		04229211C71F7725A3EAAD0B /* MainScreenViewController_Image_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreenViewController_Image_7.png; sourceTree = "<group>"; };
+		09338D584760888C6C9036FC /* LogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		0C2339CF730AD6B4E8A300C2 /* MainScreenViewController_Image_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreenViewController_Image_4.png; sourceTree = "<group>"; };
+		0CC3649AAC1F8734A7CB5676 /* EditDoctorSInfoViewController_Image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditDoctorSInfoViewController_Image_3.png; sourceTree = "<group>"; };
+		0EFEFA2A3182A57738980BE7 /* LogEntryViewController_Image_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogEntryViewController_Image_5.png; sourceTree = "<group>"; };
+		12469A6B8EE701185F96ECC7 /* EditLogEntryViewController_Image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditLogEntryViewController_Image_3.png; sourceTree = "<group>"; };
+		13567D4DA8F0218FF6D7F80C /* SettingsViewController_Image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsViewController_Image_2.png; sourceTree = "<group>"; };
+		13FC842CC76679D215B72C69 /* MainScreenViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreenViewController_Image_1.png; sourceTree = "<group>"; };
+		1603AB6FD065E32471FBBC79 /* MainScreenViewController_Image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreenViewController_Image_3.png; sourceTree = "<group>"; };
+		18322223595C2B36BDB872A8 /* DoctorSInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DoctorSInfoViewController.h; sourceTree = "<group>"; };
+		1CACC368D04162D7A7A63D1C /* LogInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		2BCFD14DA7803EFF52457ACF /* EditLogEntryViewController_Image_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditLogEntryViewController_Image_4.png; sourceTree = "<group>"; };
+		3FEE7585534332C6AD8D495A /* DoctorSInfoViewController_Image_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoctorSInfoViewController_Image_7.png; sourceTree = "<group>"; };
+		403F830B6E4DCB416F60DFE1 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		40713B64676696C6E8F0880D /* DoctorSInfoViewController_Image_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoctorSInfoViewController_Image_8.png; sourceTree = "<group>"; };
+		441FD180BB3DCCD93EA07645 /* LogEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogEntryViewController.m; sourceTree = "<group>"; };
+		4493D44B66AA8B658954AC39 /* EditDoctorSInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditDoctorSInfoViewController.m; sourceTree = "<group>"; };
+		44D02C3911B937D2ABDC2FE3 /* LogListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogListViewController.h; sourceTree = "<group>"; };
+		467CFF5E798A9E4E0473D674 /* EditLogEntryViewController_Image_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditLogEntryViewController_Image_5.png; sourceTree = "<group>"; };
+		46F740CCA630129514D5F47C /* LogEntryViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogEntryViewController_Image_1.png; sourceTree = "<group>"; };
+		488B758CF400EAB7F2890021 /* MedicineListViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MedicineListViewController_Image_1.png; sourceTree = "<group>"; };
+		499BD74206D7B27992294988 /* SettingsViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsViewController_Image_1.png; sourceTree = "<group>"; };
+		4B602FA5790C7CD5EAA5AEFD /* MainScreenViewController_Image_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreenViewController_Image_9.png; sourceTree = "<group>"; };
+		4C8A5EEC5DD745FFB99715C1 /* EditLogEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditLogEntryViewController.h; sourceTree = "<group>"; };
+		53A88E15728C93A7E2A85E61 /* EditPersonalInfoViewController_Image_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditPersonalInfoViewController_Image_4.png; sourceTree = "<group>"; };
+		55E492874EE3B82954668016 /* MainScreenViewController_Image_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreenViewController_Image_5.png; sourceTree = "<group>"; };
+		56705054E5D7436F46B6A49F /* MainScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainScreenViewController.m; sourceTree = "<group>"; };
+		5992A778ED82F5DFC49B1DF1 /* MainScreenViewController_Image_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreenViewController_Image_10.png; sourceTree = "<group>"; };
+		5E7A20E47532416127CE8358 /* MedicineListViewController_Image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MedicineListViewController_Image_3.png; sourceTree = "<group>"; };
+		5EFBA0A89B1A8F48AD5E226F /* EditPersonalInfoViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditPersonalInfoViewController_Image_1.png; sourceTree = "<group>"; };
+		627A37707FFD258F6A56C5FB /* LogEntryViewController_Image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogEntryViewController_Image_3.png; sourceTree = "<group>"; };
+		62C434AF1D0A53797B48DE57 /* DoctorSInfoViewController_Image_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoctorSInfoViewController_Image_4.png; sourceTree = "<group>"; };
+		6A126C3390AD187C0309756C /* LogInViewController_Image_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogInViewController_Image_4.png; sourceTree = "<group>"; };
+		70D40D9E86769E9AB82B8BFA /* DoctorSInfoViewController_Image_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoctorSInfoViewController_Image_6.png; sourceTree = "<group>"; };
+		715594226EFFA55C29232F40 /* DoctorSInfoViewController_Image_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoctorSInfoViewController_Image_5.png; sourceTree = "<group>"; };
+		7897CC1D6B37A76D1149D408 /* LogEntryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogEntryViewController.h; sourceTree = "<group>"; };
+		84E9FD39CD9E4C79EC1046E3 /* DoctorSInfoViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoctorSInfoViewController_Image_1.png; sourceTree = "<group>"; };
+		8BD0EDC4394D8D77538EB82A /* EditDoctorSInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditDoctorSInfoViewController.h; sourceTree = "<group>"; };
+		8E0954AB6F8A1C216D33BFF9 /* MainScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainScreenViewController.h; sourceTree = "<group>"; };
+		8F412FE384A4E2E89C9EFD08 /* MedicineListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MedicineListViewController.h; sourceTree = "<group>"; };
+		949DE5E6580D581DAF81FF73 /* MainScreenViewController_Image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreenViewController_Image_2.png; sourceTree = "<group>"; };
+		973C2843B811B3391123AF6F /* MedicineListViewController_Image_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MedicineListViewController_Image_4.png; sourceTree = "<group>"; };
+		9959958290034392D192B855 /* LogEntryViewController_Image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogEntryViewController_Image_2.png; sourceTree = "<group>"; };
+		A28F7D29BD2F2A6C44113D03 /* LogListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogListViewController.m; sourceTree = "<group>"; };
+		A4E9D8B154CDE401709F8C95 /* MedicineListViewController_Image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MedicineListViewController_Image_2.png; sourceTree = "<group>"; };
+		A5199C95892737792E0345AD /* DoctorSInfoViewController_Image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoctorSInfoViewController_Image_2.png; sourceTree = "<group>"; };
+		ACC89DA7EE3BC369F0320A9A /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		B3BE659B186CC5487D62C296 /* EditLogEntryViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditLogEntryViewController_Image_1.png; sourceTree = "<group>"; };
+		BC2C3D286611C71FCEA3539D /* ShareLogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareLogViewController.m; sourceTree = "<group>"; };
+		C0B02B5727F250B3C73282D4 /* EditDoctorSInfoViewController_Image_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditDoctorSInfoViewController_Image_4.png; sourceTree = "<group>"; };
+		C7A9167581C0781B294A9408 /* EditLogEntryViewController_Image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditLogEntryViewController_Image_2.png; sourceTree = "<group>"; };
+		C95087D2993B3EE49FBC7199 /* EditPersonalInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditPersonalInfoViewController.m; sourceTree = "<group>"; };
+		D3200B76848A3631E47796DE /* LogInViewController_Image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogInViewController_Image_3.png; sourceTree = "<group>"; };
+		D4238CA7065971C7885EE060 /* EditLogEntryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditLogEntryViewController.m; sourceTree = "<group>"; };
+		D7C81EC40FF8A0DD0C84892B /* EditPersonalInfoViewController_Image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditPersonalInfoViewController_Image_3.png; sourceTree = "<group>"; };
+		D926D725D1E724025C6B665D /* EditDoctorSInfoViewController_Image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditDoctorSInfoViewController_Image_2.png; sourceTree = "<group>"; };
+		DA081859EBB875F2F2371D1E /* MedicineListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MedicineListViewController.m; sourceTree = "<group>"; };
+		E1F7F4341A2994B852C16230 /* MainScreenViewController_Image_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainScreenViewController_Image_8.png; sourceTree = "<group>"; };
+		E4AD24399D767F455032BECE /* EditPersonalInfoViewController_Image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditPersonalInfoViewController_Image_2.png; sourceTree = "<group>"; };
+		E653EC3F141DFF358C8AA919 /* ShareLogViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShareLogViewController_Image_1.png; sourceTree = "<group>"; };
+		ED2FD27DD92A227D0976A5F2 /* LogInViewController_Image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogInViewController_Image_2.png; sourceTree = "<group>"; };
+		F2A83E078441DDF681EFD782 /* LogEntryViewController_Image_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogEntryViewController_Image_4.png; sourceTree = "<group>"; };
+		F741A6FD58AFCC5C97696EBE /* DoctorSInfoViewController_Image_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoctorSInfoViewController_Image_3.png; sourceTree = "<group>"; };
+		F8FD4D0F09AFC4CDD2B00549 /* LogInViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogInViewController_Image_1.png; sourceTree = "<group>"; };
+		FE6CB265CCBF671A28C97FDC /* LogListViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogListViewController_Image_1.png; sourceTree = "<group>"; };
+		FFCAD51AE9D390D07C81DA1B /* EditPersonalInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditPersonalInfoViewController.h; sourceTree = "<group>"; };
+		FFDFCA583A190B50A3189129 /* EditDoctorSInfoViewController_Image_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EditDoctorSInfoViewController_Image_1.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02C8A2AD14C97CA60021F408 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02C8A2CE14C97CC80021F408 /* QuartzCore.framework in Frameworks */,
+				02C8A2CC14C97CC00021F408 /* MapKit.framework in Frameworks */,
+				02C8A2B514C97CA60021F408 /* UIKit.framework in Frameworks */,
+				02C8A2B714C97CA60021F408 /* Foundation.framework in Frameworks */,
+				02C8A2B914C97CA60021F408 /* CoreGraphics.framework in Frameworks */,
+				02AA5E3814D59768004CE70D /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02C8A2A514C97CA60021F408 = {
+			isa = PBXGroup;
+			children = (
+				02C8A2BA14C97CA60021F408 /* Interface Export */,
+				02C8A2B314C97CA60021F408 /* Frameworks */,
+				02C8A2B114C97CA60021F408 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		02C8A2B114C97CA60021F408 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				02C8A2B014C97CA60021F408 /* Interface Export.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		02C8A2B314C97CA60021F408 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02AA5E3714D59768004CE70D /* CoreLocation.framework */,
+				02C8A2CD14C97CC80021F408 /* QuartzCore.framework */,
+				02C8A2CB14C97CC00021F408 /* MapKit.framework */,
+				02C8A2B414C97CA60021F408 /* UIKit.framework */,
+				02C8A2B614C97CA60021F408 /* Foundation.framework */,
+				02C8A2B814C97CA60021F408 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02C8A2BA14C97CA60021F408 /* Interface Export */ = {
+			isa = PBXGroup;
+			children = (
+				02C8A2C314C97CA60021F408 /* IFAppDelegate.h */,
+				02C8A2C414C97CA60021F408 /* IFAppDelegate.m */,
+				8E0954AB6F8A1C216D33BFF9 /* MainScreenViewController.h */,
+				56705054E5D7436F46B6A49F /* MainScreenViewController.m */,
+				00BB766B49B998E823669888 /* ShareLogViewController.h */,
+				BC2C3D286611C71FCEA3539D /* ShareLogViewController.m */,
+				18322223595C2B36BDB872A8 /* DoctorSInfoViewController.h */,
+				0257A58B0EFA7F5DEBA87C64 /* DoctorSInfoViewController.m */,
+				8F412FE384A4E2E89C9EFD08 /* MedicineListViewController.h */,
+				DA081859EBB875F2F2371D1E /* MedicineListViewController.m */,
+				44D02C3911B937D2ABDC2FE3 /* LogListViewController.h */,
+				A28F7D29BD2F2A6C44113D03 /* LogListViewController.m */,
+				403F830B6E4DCB416F60DFE1 /* SettingsViewController.h */,
+				ACC89DA7EE3BC369F0320A9A /* SettingsViewController.m */,
+				1CACC368D04162D7A7A63D1C /* LogInViewController.h */,
+				09338D584760888C6C9036FC /* LogInViewController.m */,
+				8BD0EDC4394D8D77538EB82A /* EditDoctorSInfoViewController.h */,
+				4493D44B66AA8B658954AC39 /* EditDoctorSInfoViewController.m */,
+				4C8A5EEC5DD745FFB99715C1 /* EditLogEntryViewController.h */,
+				D4238CA7065971C7885EE060 /* EditLogEntryViewController.m */,
+				FFCAD51AE9D390D07C81DA1B /* EditPersonalInfoViewController.h */,
+				C95087D2993B3EE49FBC7199 /* EditPersonalInfoViewController.m */,
+				7897CC1D6B37A76D1149D408 /* LogEntryViewController.h */,
+				441FD180BB3DCCD93EA07645 /* LogEntryViewController.m */,
+				13FC842CC76679D215B72C69 /* MainScreenViewController_Image_1.png */,
+				949DE5E6580D581DAF81FF73 /* MainScreenViewController_Image_2.png */,
+				1603AB6FD065E32471FBBC79 /* MainScreenViewController_Image_3.png */,
+				0C2339CF730AD6B4E8A300C2 /* MainScreenViewController_Image_4.png */,
+				55E492874EE3B82954668016 /* MainScreenViewController_Image_5.png */,
+				0085BB746A58FBB14E28AE4F /* MainScreenViewController_Image_6.png */,
+				04229211C71F7725A3EAAD0B /* MainScreenViewController_Image_7.png */,
+				E1F7F4341A2994B852C16230 /* MainScreenViewController_Image_8.png */,
+				4B602FA5790C7CD5EAA5AEFD /* MainScreenViewController_Image_9.png */,
+				5992A778ED82F5DFC49B1DF1 /* MainScreenViewController_Image_10.png */,
+				E653EC3F141DFF358C8AA919 /* ShareLogViewController_Image_1.png */,
+				84E9FD39CD9E4C79EC1046E3 /* DoctorSInfoViewController_Image_1.png */,
+				A5199C95892737792E0345AD /* DoctorSInfoViewController_Image_2.png */,
+				F741A6FD58AFCC5C97696EBE /* DoctorSInfoViewController_Image_3.png */,
+				62C434AF1D0A53797B48DE57 /* DoctorSInfoViewController_Image_4.png */,
+				715594226EFFA55C29232F40 /* DoctorSInfoViewController_Image_5.png */,
+				70D40D9E86769E9AB82B8BFA /* DoctorSInfoViewController_Image_6.png */,
+				3FEE7585534332C6AD8D495A /* DoctorSInfoViewController_Image_7.png */,
+				40713B64676696C6E8F0880D /* DoctorSInfoViewController_Image_8.png */,
+				488B758CF400EAB7F2890021 /* MedicineListViewController_Image_1.png */,
+				A4E9D8B154CDE401709F8C95 /* MedicineListViewController_Image_2.png */,
+				5E7A20E47532416127CE8358 /* MedicineListViewController_Image_3.png */,
+				973C2843B811B3391123AF6F /* MedicineListViewController_Image_4.png */,
+				FE6CB265CCBF671A28C97FDC /* LogListViewController_Image_1.png */,
+				499BD74206D7B27992294988 /* SettingsViewController_Image_1.png */,
+				13567D4DA8F0218FF6D7F80C /* SettingsViewController_Image_2.png */,
+				F8FD4D0F09AFC4CDD2B00549 /* LogInViewController_Image_1.png */,
+				ED2FD27DD92A227D0976A5F2 /* LogInViewController_Image_2.png */,
+				D3200B76848A3631E47796DE /* LogInViewController_Image_3.png */,
+				6A126C3390AD187C0309756C /* LogInViewController_Image_4.png */,
+				FFDFCA583A190B50A3189129 /* EditDoctorSInfoViewController_Image_1.png */,
+				D926D725D1E724025C6B665D /* EditDoctorSInfoViewController_Image_2.png */,
+				0CC3649AAC1F8734A7CB5676 /* EditDoctorSInfoViewController_Image_3.png */,
+				C0B02B5727F250B3C73282D4 /* EditDoctorSInfoViewController_Image_4.png */,
+				B3BE659B186CC5487D62C296 /* EditLogEntryViewController_Image_1.png */,
+				C7A9167581C0781B294A9408 /* EditLogEntryViewController_Image_2.png */,
+				12469A6B8EE701185F96ECC7 /* EditLogEntryViewController_Image_3.png */,
+				2BCFD14DA7803EFF52457ACF /* EditLogEntryViewController_Image_4.png */,
+				467CFF5E798A9E4E0473D674 /* EditLogEntryViewController_Image_5.png */,
+				5EFBA0A89B1A8F48AD5E226F /* EditPersonalInfoViewController_Image_1.png */,
+				E4AD24399D767F455032BECE /* EditPersonalInfoViewController_Image_2.png */,
+				D7C81EC40FF8A0DD0C84892B /* EditPersonalInfoViewController_Image_3.png */,
+				53A88E15728C93A7E2A85E61 /* EditPersonalInfoViewController_Image_4.png */,
+				46F740CCA630129514D5F47C /* LogEntryViewController_Image_1.png */,
+				9959958290034392D192B855 /* LogEntryViewController_Image_2.png */,
+				627A37707FFD258F6A56C5FB /* LogEntryViewController_Image_3.png */,
+				F2A83E078441DDF681EFD782 /* LogEntryViewController_Image_4.png */,
+				0EFEFA2A3182A57738980BE7 /* LogEntryViewController_Image_5.png */,
+				02C8A2BB14C97CA60021F408 /* Supporting Files */,
+			);
+			path = "Interface Export";
+			sourceTree = "<group>";
+		};
+		02C8A2BB14C97CA60021F408 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				02AA5E0514D57AF2004CE70D /* Gradient.h */,
+				02AA5E0614D57AF2004CE70D /* Gradient.m */,
+				02AA5E0714D57AF2004CE70D /* GradientNode.h */,
+				02AA5E0814D57AF2004CE70D /* GradientNode.m */,
+				02AA5E0914D57AF2004CE70D /* GradientView.h */,
+				02AA5E0A14D57AF2004CE70D /* GradientView.m */,
+				02AA5E3A14D597DB004CE70D /* MKMapView+ZoomLevel.h */,
+				02AA5E3B14D597DB004CE70D /* MKMapView+ZoomLevel.m */,
+				02C8A2BC14C97CA60021F408 /* Interface Export-Info.plist */,
+				02C8A2BD14C97CA60021F408 /* InfoPlist.strings */,
+				02C8A2C014C97CA60021F408 /* main.m */,
+				02C8A2C214C97CA60021F408 /* Interface Export-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		02C8A2AF14C97CA60021F408 /* Interface Export */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02C8A2C814C97CA60021F408 /* Build configuration list for PBXNativeTarget "Interface Export" */;
+			buildPhases = (
+				02C8A2AC14C97CA60021F408 /* Sources */,
+				02C8A2AD14C97CA60021F408 /* Frameworks */,
+				02C8A2AE14C97CA60021F408 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Interface Export";
+			productName = "Interface Export";
+			productReference = 02C8A2B014C97CA60021F408 /* Interface Export.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		02C8A2A714C97CA60021F408 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Less Code Limited";
+			};
+			buildConfigurationList = 02C8A2AA14C97CA60021F408 /* Build configuration list for PBXProject "Interface Export" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 02C8A2A514C97CA60021F408;
+			productRefGroup = 02C8A2B114C97CA60021F408 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				02C8A2AF14C97CA60021F408 /* Interface Export */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		02C8A2AE14C97CA60021F408 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02C8A2BF14C97CA60021F408 /* InfoPlist.strings in Resources */,
+				A16D5731542894433A1A8BB7 /* MainScreenViewController_Image_1.png in Resources */,
+				3F85EBDC9A5D1AAB775A2106 /* MainScreenViewController_Image_2.png in Resources */,
+				8BA02FC734E5242A9B811AC5 /* MainScreenViewController_Image_3.png in Resources */,
+				99B6E802B52A666BAEE14100 /* MainScreenViewController_Image_4.png in Resources */,
+				6E59C22D8CDE9C224DB63B60 /* MainScreenViewController_Image_5.png in Resources */,
+				31E30CF0E44ACBBB3A11BF7D /* MainScreenViewController_Image_6.png in Resources */,
+				F64D8FA07DBF8DCA87BC8E84 /* MainScreenViewController_Image_7.png in Resources */,
+				519525A1E8E0CE2C9BF46EAB /* MainScreenViewController_Image_8.png in Resources */,
+				4FE1C2F9AAF97EF7177C2902 /* MainScreenViewController_Image_9.png in Resources */,
+				0E4C79FA571F48481263D5B8 /* MainScreenViewController_Image_10.png in Resources */,
+				90AE753E5B919A536CDEDA19 /* ShareLogViewController_Image_1.png in Resources */,
+				BC157959C3A983646389D04F /* DoctorSInfoViewController_Image_1.png in Resources */,
+				C373CAD49C9BAAA3C48070E0 /* DoctorSInfoViewController_Image_2.png in Resources */,
+				3398E9698E13B96FFABDDA76 /* DoctorSInfoViewController_Image_3.png in Resources */,
+				5F2315A0F8874357DDBEE0B9 /* DoctorSInfoViewController_Image_4.png in Resources */,
+				91C261B5808F72E5B7052DD4 /* DoctorSInfoViewController_Image_5.png in Resources */,
+				13B590E3D3B7E199A3713517 /* DoctorSInfoViewController_Image_6.png in Resources */,
+				DE056426B1BC03001FC9EDE5 /* DoctorSInfoViewController_Image_7.png in Resources */,
+				41758DB162CBB16F60B71B2A /* DoctorSInfoViewController_Image_8.png in Resources */,
+				0AAC3358794C6F57C480EDC7 /* MedicineListViewController_Image_1.png in Resources */,
+				4EB7EF9B6C67A8B7484BFD3F /* MedicineListViewController_Image_2.png in Resources */,
+				384DDB59E64F991D189C442A /* MedicineListViewController_Image_3.png in Resources */,
+				3C8788279E1EF628843D0CD9 /* MedicineListViewController_Image_4.png in Resources */,
+				40FD0888A286FA7D14DB7E2B /* LogListViewController_Image_1.png in Resources */,
+				374028BBD5BA1FC9BE1A9697 /* SettingsViewController_Image_1.png in Resources */,
+				52013DBEF6C2C78A79DF19BA /* SettingsViewController_Image_2.png in Resources */,
+				55CFC7424620B39F046BC7C4 /* LogInViewController_Image_1.png in Resources */,
+				5E1311C4EC73B098EA36A488 /* LogInViewController_Image_2.png in Resources */,
+				43B51AA94EC63CD24E6A93BB /* LogInViewController_Image_3.png in Resources */,
+				C3B3631A07F296FF14977658 /* LogInViewController_Image_4.png in Resources */,
+				A134013E9B726E7209DF2AE0 /* EditDoctorSInfoViewController_Image_1.png in Resources */,
+				B6E6411F348950CD84F6CD2D /* EditDoctorSInfoViewController_Image_2.png in Resources */,
+				C228F5F0653E4EC70A2447CE /* EditDoctorSInfoViewController_Image_3.png in Resources */,
+				AC3666D17507AFB5B59C7DEA /* EditDoctorSInfoViewController_Image_4.png in Resources */,
+				DD4B2C34A8430B434C36B863 /* EditLogEntryViewController_Image_1.png in Resources */,
+				A67F01A7A0D0E72AD2FB349F /* EditLogEntryViewController_Image_2.png in Resources */,
+				F1826BB1032C175911E525B6 /* EditLogEntryViewController_Image_3.png in Resources */,
+				691D3914C669E5BC10874A26 /* EditLogEntryViewController_Image_4.png in Resources */,
+				7334F9F38EE73899CEF39052 /* EditLogEntryViewController_Image_5.png in Resources */,
+				6E72ABC0C65BCA5AB636BDAD /* EditPersonalInfoViewController_Image_1.png in Resources */,
+				764760506DEEF14B01600BEF /* EditPersonalInfoViewController_Image_2.png in Resources */,
+				39648B79E722C05A9CFC8CE0 /* EditPersonalInfoViewController_Image_3.png in Resources */,
+				F75DB0B0B2A771103CA0A91E /* EditPersonalInfoViewController_Image_4.png in Resources */,
+				0B88E426A2A147DB0CFEE2B9 /* LogEntryViewController_Image_1.png in Resources */,
+				D3386E8A81B12685259F102E /* LogEntryViewController_Image_2.png in Resources */,
+				52930BB45A8C1BB01F5B425F /* LogEntryViewController_Image_3.png in Resources */,
+				1E051B94C3878A8A8AC04157 /* LogEntryViewController_Image_4.png in Resources */,
+				84FD27986BFB69A4737FB29B /* LogEntryViewController_Image_5.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02C8A2AC14C97CA60021F408 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02C8A2C114C97CA60021F408 /* main.m in Sources */,
+				02C8A2C514C97CA60021F408 /* IFAppDelegate.m in Sources */,
+				02AA5E0B14D57AF2004CE70D /* Gradient.m in Sources */,
+				02AA5E0C14D57AF2004CE70D /* GradientNode.m in Sources */,
+				02AA5E0D14D57AF2004CE70D /* GradientView.m in Sources */,
+				02AA5E3C14D597DB004CE70D /* MKMapView+ZoomLevel.m in Sources */,
+				69F9288A3EE00628769E1188 /* MainScreenViewController.m in Sources */,
+				6F7B4CE35E918A568CC81EC3 /* ShareLogViewController.m in Sources */,
+				71F157361F78280428007A14 /* DoctorSInfoViewController.m in Sources */,
+				13CDB2F947DAB1ED61B40AE6 /* MedicineListViewController.m in Sources */,
+				E37E4142569DDB00C68102BC /* LogListViewController.m in Sources */,
+				61B59445E8239670C5C762D8 /* SettingsViewController.m in Sources */,
+				58D18AC317B912BDCE16678A /* LogInViewController.m in Sources */,
+				165520C896EB9F39E549810D /* EditDoctorSInfoViewController.m in Sources */,
+				903D4EBAEE97D8949274F6ED /* EditLogEntryViewController.m in Sources */,
+				F2462A3965E8ADD384F98AC1 /* EditPersonalInfoViewController.m in Sources */,
+				866B9BEF57D9D276AF520730 /* LogEntryViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		02C8A2BD14C97CA60021F408 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				02C8A2BE14C97CA60021F408 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		02C8A2C614C97CA60021F408 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		02C8A2C714C97CA60021F408 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		02C8A2C914C97CA60021F408 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Interface Export/Interface Export-Prefix.pch";
+				INFOPLIST_FILE = "Interface Export/Interface Export-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		02C8A2CA14C97CA60021F408 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Interface Export/Interface Export-Prefix.pch";
+				INFOPLIST_FILE = "Interface Export/Interface Export-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02C8A2AA14C97CA60021F408 /* Build configuration list for PBXProject "Interface Export" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02C8A2C614C97CA60021F408 /* Debug */,
+				02C8A2C714C97CA60021F408 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		02C8A2C814C97CA60021F408 /* Build configuration list for PBXNativeTarget "Interface Export" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				02C8A2C914C97CA60021F408 /* Debug */,
+				02C8A2CA14C97CA60021F408 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 02C8A2A714C97CA60021F408 /* Project object */;
+}
