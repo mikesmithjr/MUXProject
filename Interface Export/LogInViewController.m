@@ -26,7 +26,7 @@
   // View Controller Root View;
   // ----------------------------;
   
-  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LogInViewController_Image_1.png"]];
+  self.view.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
   contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   
@@ -44,7 +44,7 @@
   navigationBar1.alpha = 1.0;
   navigationBar1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
   navigationBar1.barStyle = UIBarStyleDefault;
-  navigationBar1.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
+  navigationBar1.tintColor = [UIColor colorWithRed:0.5 green:0.25 blue:0.0 alpha:1.0];
   navigationBar1.topItem.title = @"Sign In";
   [navigationBar1 setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
   
@@ -86,7 +86,7 @@
   label1.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   label1.text = @"Username:";
   label1.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LogInViewController_Image_2.png"]];
+  label1.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label1.textAlignment = UITextAlignmentLeft;
   label1.shadowOffset = CGSizeMake(0, -1);
   label1.font = [UIFont fontWithName:@".HelveticaNeueUI" size:17.0];
@@ -103,7 +103,7 @@
   label2.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   label2.text = @"Password:";
   label2.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label2.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LogInViewController_Image_3.png"]];
+  label2.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label2.textAlignment = UITextAlignmentLeft;
   label2.shadowOffset = CGSizeMake(0, -1);
   label2.font = [UIFont fontWithName:@".HelveticaNeueUI" size:17.0];
@@ -173,7 +173,7 @@
   label3.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   label3.text = @"Remember Me";
   label3.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label3.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LogInViewController_Image_4.png"]];
+  label3.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label3.textAlignment = UITextAlignmentLeft;
   label3.shadowOffset = CGSizeMake(0, -1);
   label3.font = [UIFont fontWithName:@".HelveticaNeueUI" size:17.0];

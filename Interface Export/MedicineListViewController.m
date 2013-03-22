@@ -9,6 +9,7 @@
 #import "MedicineListViewController.h"
 #import "MainScreenViewController.h"
 #import "DoctorSInfoViewController.h"
+#import "SettingsViewController.h"
 
 #import "GradientView.h"
 #import "MKMapView+ZoomLevel.h"
@@ -33,27 +34,6 @@
   contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   
   // ----------------------------;
-  // UINavigationBar -> navigationBar1;
-  // ----------------------------;
-  
-  UINavigationBar *navigationBar1 = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-  navigationBar1.delegate = (id<UINavigationBarDelegate>)self;
-  UINavigationItem *navigationBar1BackItem = [[[UINavigationItem alloc] initWithTitle:nil] autorelease];
-  UINavigationItem *navigationBar1TopItem = [[[UINavigationItem alloc] initWithTitle:nil] autorelease];
-  NSArray *navigationBar1Items = [NSArray arrayWithObjects:navigationBar1BackItem, navigationBar1TopItem, nil];
-  [navigationBar1 setItems:navigationBar1Items animated:NO];
-  [contentView addSubview:navigationBar1];
-  navigationBar1.alpha = 1.0;
-  navigationBar1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-  navigationBar1.barStyle = UIBarStyleDefault;
-  navigationBar1.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
-  navigationBar1.topItem.title = @"Medicine List";
-  [navigationBar1 setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
-  navigationBar1.topItem.hidesBackButton = YES;
-  [navigationBar1 release];
-  
-  
-  // ----------------------------;
   // UITableView -> tableView1;
   // ----------------------------;
   
@@ -76,7 +56,7 @@
   // ----------------------------;
   
   NSMutableDictionary *tableViewSection1Data = [NSMutableDictionary dictionary];
-  [tableViewSection1Data setObject:@"Section" forKey:@"headerText"];
+  [tableViewSection1Data setObject:@"" forKey:@"headerText"];
   [tableViewSection1Data setObject:@"" forKey:@"footerText"];
   [tableViewSection1Data setObject:[NSMutableArray array] forKey:@"cells"];
   [self.tableView1Data addObject:tableViewSection1Data];
@@ -86,10 +66,11 @@
   // ----------------------------;
   
   NSMutableDictionary *tableViewCell1Data = [NSMutableDictionary dictionary];
-  UITableViewCell *tableViewCell1 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+  UITableViewCell *tableViewCell1 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
   tableViewCell1.textLabel.text = @"Med #1";
-  tableViewCell1.detailTextLabel.text = @"Subtitle";
+  tableViewCell1.detailTextLabel.text = @"Take 1 AM 1 PM";
   tableViewCell1.accessoryType = UITableViewCellAccessoryNone;
+  tableViewCell1.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   [tableViewCell1Data setObject:tableViewCell1 forKey:@"cell"];
   [tableViewCell1Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
   [tableViewCell1Data setObject:[NSNumber numberWithInteger:0] forKey:@"indentationLevel"];
@@ -102,9 +83,9 @@
   // ----------------------------;
   
   NSMutableDictionary *tableViewCell2Data = [NSMutableDictionary dictionary];
-  UITableViewCell *tableViewCell2 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+  UITableViewCell *tableViewCell2 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
   tableViewCell2.textLabel.text = @"Med #2";
-  tableViewCell2.detailTextLabel.text = @"Subtitle";
+  tableViewCell2.detailTextLabel.text = @"Take 1 AM 1 PM";
   tableViewCell2.accessoryType = UITableViewCellAccessoryNone;
   [tableViewCell2Data setObject:tableViewCell2 forKey:@"cell"];
   [tableViewCell2Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
@@ -118,9 +99,9 @@
   // ----------------------------;
   
   NSMutableDictionary *tableViewCell3Data = [NSMutableDictionary dictionary];
-  UITableViewCell *tableViewCell3 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+  UITableViewCell *tableViewCell3 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
   tableViewCell3.textLabel.text = @"Med #3";
-  tableViewCell3.detailTextLabel.text = @"Subtitle";
+  tableViewCell3.detailTextLabel.text = @"Take 1 AM 1 PM";
   tableViewCell3.accessoryType = UITableViewCellAccessoryNone;
   [tableViewCell3Data setObject:tableViewCell3 forKey:@"cell"];
   [tableViewCell3Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
@@ -134,9 +115,9 @@
   // ----------------------------;
   
   NSMutableDictionary *tableViewCell4Data = [NSMutableDictionary dictionary];
-  UITableViewCell *tableViewCell4 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+  UITableViewCell *tableViewCell4 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
   tableViewCell4.textLabel.text = @"Med #4";
-  tableViewCell4.detailTextLabel.text = @"Subtitle";
+  tableViewCell4.detailTextLabel.text = @"Take 1 AM 1 PM";
   tableViewCell4.accessoryType = UITableViewCellAccessoryNone;
   [tableViewCell4Data setObject:tableViewCell4 forKey:@"cell"];
   [tableViewCell4Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
@@ -150,9 +131,9 @@
   // ----------------------------;
   
   NSMutableDictionary *tableViewCell5Data = [NSMutableDictionary dictionary];
-  UITableViewCell *tableViewCell5 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+  UITableViewCell *tableViewCell5 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
   tableViewCell5.textLabel.text = @"Med #5";
-  tableViewCell5.detailTextLabel.text = @"Subtitle";
+  tableViewCell5.detailTextLabel.text = @"Take 1 AM 1 PM";
   tableViewCell5.accessoryType = UITableViewCellAccessoryNone;
   [tableViewCell5Data setObject:tableViewCell5 forKey:@"cell"];
   [tableViewCell5Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
@@ -166,9 +147,9 @@
   // ----------------------------;
   
   NSMutableDictionary *tableViewCell6Data = [NSMutableDictionary dictionary];
-  UITableViewCell *tableViewCell6 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+  UITableViewCell *tableViewCell6 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
   tableViewCell6.textLabel.text = @"Med #6";
-  tableViewCell6.detailTextLabel.text = @"Subtitle";
+  tableViewCell6.detailTextLabel.text = @"Take 1 AM";
   tableViewCell6.accessoryType = UITableViewCellAccessoryNone;
   [tableViewCell6Data setObject:tableViewCell6 forKey:@"cell"];
   [tableViewCell6Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
@@ -182,9 +163,9 @@
   // ----------------------------;
   
   NSMutableDictionary *tableViewCell7Data = [NSMutableDictionary dictionary];
-  UITableViewCell *tableViewCell7 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+  UITableViewCell *tableViewCell7 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
   tableViewCell7.textLabel.text = @"Med #7";
-  tableViewCell7.detailTextLabel.text = @"Subtitle";
+  tableViewCell7.detailTextLabel.text = @"Take 1 PM";
   tableViewCell7.accessoryType = UITableViewCellAccessoryNone;
   [tableViewCell7Data setObject:tableViewCell7 forKey:@"cell"];
   [tableViewCell7Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
@@ -198,9 +179,9 @@
   // ----------------------------;
   
   NSMutableDictionary *tableViewCell8Data = [NSMutableDictionary dictionary];
-  UITableViewCell *tableViewCell8 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+  UITableViewCell *tableViewCell8 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
   tableViewCell8.textLabel.text = @"Med #8";
-  tableViewCell8.detailTextLabel.text = @"Subtitle";
+  tableViewCell8.detailTextLabel.text = @"Take 1 AM";
   tableViewCell8.accessoryType = UITableViewCellAccessoryNone;
   [tableViewCell8Data setObject:tableViewCell8 forKey:@"cell"];
   [tableViewCell8Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
@@ -214,9 +195,9 @@
   // ----------------------------;
   
   NSMutableDictionary *tableViewCell9Data = [NSMutableDictionary dictionary];
-  UITableViewCell *tableViewCell9 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil] autorelease];
+  UITableViewCell *tableViewCell9 = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil] autorelease];
   tableViewCell9.textLabel.text = @"Med #9";
-  tableViewCell9.detailTextLabel.text = @"Subtitle";
+  tableViewCell9.detailTextLabel.text = @"Take 1 AM 1PM";
   tableViewCell9.accessoryType = UITableViewCellAccessoryNone;
   [tableViewCell9Data setObject:tableViewCell9 forKey:@"cell"];
   [tableViewCell9Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
@@ -224,6 +205,27 @@
   [tableViewCell9Data setObject:[NSNumber numberWithFloat:44] forKey:@"height"];
   [tableViewCell9Data setObject:[NSNumber numberWithBool:YES] forKey:@"showReorderControl"];
   [[tableViewSection1Data objectForKey:@"cells"] addObject:tableViewCell9Data];
+  
+  // ----------------------------;
+  // UINavigationBar -> navigationBar1;
+  // ----------------------------;
+  
+  UINavigationBar *navigationBar1 = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+  navigationBar1.delegate = (id<UINavigationBarDelegate>)self;
+  UINavigationItem *navigationBar1BackItem = [[[UINavigationItem alloc] initWithTitle:nil] autorelease];
+  UINavigationItem *navigationBar1TopItem = [[[UINavigationItem alloc] initWithTitle:nil] autorelease];
+  NSArray *navigationBar1Items = [NSArray arrayWithObjects:navigationBar1BackItem, navigationBar1TopItem, nil];
+  [navigationBar1 setItems:navigationBar1Items animated:NO];
+  [contentView addSubview:navigationBar1];
+  navigationBar1.alpha = 1.0;
+  navigationBar1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+  navigationBar1.barStyle = UIBarStyleDefault;
+  navigationBar1.tintColor = [UIColor colorWithRed:0.5 green:0.25 blue:0.0 alpha:1.0];
+  navigationBar1.topItem.title = @"Medicine List";
+  [navigationBar1 setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
+  navigationBar1.topItem.hidesBackButton = YES;
+  [navigationBar1 release];
+  
   
   // ----------------------------;
   // UITabBar -> tabBar1;
@@ -258,7 +260,14 @@
   
   UITabBarItem *tabBarItem3 = [[[UITabBarItem alloc] initWithTitle:@"Medicine List" image:[UIImage imageNamed:@"MedicineListViewController_Image_4.png"] tag:3] autorelease];
   
-  tabBar1.items = [NSArray arrayWithObjects:tabBarItem1, tabBarItem2, tabBarItem3, nil];
+  
+  // ----------------------------;
+  // Tab Bar Item -> tabBarItem4;
+  // ----------------------------;
+  
+  UITabBarItem *tabBarItem4 = [[[UITabBarItem alloc] initWithTitle:@"Settings" image:[UIImage imageNamed:@"MedicineListViewController_Image_5.png"] tag:4] autorelease];
+  
+  tabBar1.items = [NSArray arrayWithObjects:tabBarItem1, tabBarItem2, tabBarItem3, tabBarItem4, nil];
   
   contentView.frame = self.view.bounds;
   [self.view addSubview:contentView];
@@ -435,6 +444,9 @@
   if (tabBar.tag == 1 && item.tag == 2) {;
     [self didTap_tabBarItem2];
   };
+  if (tabBar.tag == 1 && item.tag == 4) {;
+    [self didTap_tabBarItem4];
+  };
 }
 
 
@@ -457,6 +469,11 @@
 }
 - (void)didTap_tabBarItem2 {
   DoctorSInfoViewController *controller = [[DoctorSInfoViewController alloc] init];
+  [self.navigationController pushViewController:controller animated:YES];
+  [controller release];
+}
+- (void)didTap_tabBarItem4 {
+  SettingsViewController *controller = [[SettingsViewController alloc] init];
   [self.navigationController pushViewController:controller animated:YES];
   [controller release];
 }

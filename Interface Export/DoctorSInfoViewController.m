@@ -9,6 +9,7 @@
 #import "DoctorSInfoViewController.h"
 #import "MainScreenViewController.h"
 #import "MedicineListViewController.h"
+#import "SettingsViewController.h"
 
 #import "GradientView.h"
 #import "MKMapView+ZoomLevel.h"
@@ -27,7 +28,7 @@
   // View Controller Root View;
   // ----------------------------;
   
-  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DoctorSInfoViewController_Image_1.png"]];
+  self.view.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
   contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   
@@ -45,7 +46,7 @@
   navigationBar1.alpha = 1.0;
   navigationBar1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
   navigationBar1.barStyle = UIBarStyleDefault;
-  navigationBar1.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
+  navigationBar1.tintColor = [UIColor colorWithRed:0.5 green:0.25 blue:0.0 alpha:1.0];
   navigationBar1.topItem.title = @"Doctor's Info";
   [navigationBar1 setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
   navigationBar1.topItem.hidesBackButton = YES;
@@ -62,7 +63,7 @@
   label1.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   label1.text = @"Doctor's Name";
   label1.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DoctorSInfoViewController_Image_2.png"]];
+  label1.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label1.textAlignment = UITextAlignmentLeft;
   label1.shadowOffset = CGSizeMake(0, -1);
   label1.font = [UIFont fontWithName:@".HelveticaNeueUI" size:15.0];
@@ -90,17 +91,34 @@
   // UILabel -> label2;
   // ----------------------------;
   
-  UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(18, 139, 108, 34)];
+  UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(18, 220, 108, 34)];
   [contentView addSubview:label2];
   label2.alpha = 1.0;
   label2.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-  label2.text = @"Phone Number";
+  label2.text = @"Doctor's Office";
   label2.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label2.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DoctorSInfoViewController_Image_3.png"]];
+  label2.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label2.textAlignment = UITextAlignmentLeft;
   label2.shadowOffset = CGSizeMake(0, -1);
   label2.font = [UIFont fontWithName:@".HelveticaNeueUI" size:15.0];
   [label2 release];
+  
+  
+  // ----------------------------;
+  // UILabel -> label3;
+  // ----------------------------;
+  
+  UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(18, 139, 108, 34)];
+  [contentView addSubview:label3];
+  label3.alpha = 1.0;
+  label3.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+  label3.text = @"Phone Number";
+  label3.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+  label3.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
+  label3.textAlignment = UITextAlignmentLeft;
+  label3.shadowOffset = CGSizeMake(0, -1);
+  label3.font = [UIFont fontWithName:@".HelveticaNeueUI" size:15.0];
+  [label3 release];
   
   
   // ----------------------------;
@@ -118,23 +136,6 @@
   textField2.textColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
   textField2.font = [UIFont fontWithName:@".HelveticaNeueUI" size:17.0];
   [textField2 release];
-  
-  
-  // ----------------------------;
-  // UILabel -> label3;
-  // ----------------------------;
-  
-  UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(18, 220, 108, 34)];
-  [contentView addSubview:label3];
-  label3.alpha = 1.0;
-  label3.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-  label3.text = @"Doctor's Office";
-  label3.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label3.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DoctorSInfoViewController_Image_4.png"]];
-  label3.textAlignment = UITextAlignmentLeft;
-  label3.shadowOffset = CGSizeMake(0, -1);
-  label3.font = [UIFont fontWithName:@".HelveticaNeueUI" size:15.0];
-  [label3 release];
   
   
   // ----------------------------;
@@ -170,23 +171,30 @@
   // Tab Bar Item -> tabBarItem1;
   // ----------------------------;
   
-  UITabBarItem *tabBarItem1 = [[[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"DoctorSInfoViewController_Image_5.png"] tag:1] autorelease];
+  UITabBarItem *tabBarItem1 = [[[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"DoctorSInfoViewController_Image_1.png"] tag:1] autorelease];
   
   
   // ----------------------------;
   // Tab Bar Item -> tabBarItem2;
   // ----------------------------;
   
-  UITabBarItem *tabBarItem2 = [[[UITabBarItem alloc] initWithTitle:@"Doctor Info" image:[UIImage imageNamed:@"DoctorSInfoViewController_Image_6.png"] tag:2] autorelease];
+  UITabBarItem *tabBarItem2 = [[[UITabBarItem alloc] initWithTitle:@"Doctor Info" image:[UIImage imageNamed:@"DoctorSInfoViewController_Image_2.png"] tag:2] autorelease];
   
   
   // ----------------------------;
   // Tab Bar Item -> tabBarItem3;
   // ----------------------------;
   
-  UITabBarItem *tabBarItem3 = [[[UITabBarItem alloc] initWithTitle:@"Med List" image:[UIImage imageNamed:@"DoctorSInfoViewController_Image_7.png"] tag:3] autorelease];
+  UITabBarItem *tabBarItem3 = [[[UITabBarItem alloc] initWithTitle:@"Med List" image:[UIImage imageNamed:@"DoctorSInfoViewController_Image_3.png"] tag:3] autorelease];
   
-  tabBar1.items = [NSArray arrayWithObjects:tabBarItem1, tabBarItem2, tabBarItem3, nil];
+  
+  // ----------------------------;
+  // Tab Bar Item -> tabBarItem4;
+  // ----------------------------;
+  
+  UITabBarItem *tabBarItem4 = [[[UITabBarItem alloc] initWithTitle:@"Settings" image:[UIImage imageNamed:@"DoctorSInfoViewController_Image_4.png"] tag:4] autorelease];
+  
+  tabBar1.items = [NSArray arrayWithObjects:tabBarItem1, tabBarItem2, tabBarItem3, tabBarItem4, nil];
   
   // ----------------------------;
   // UILabel -> label4;
@@ -197,8 +205,8 @@
   label4.alpha = 1.0;
   label4.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   label4.text = @"Edit this info in Settings Menu";
-  label4.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label4.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"DoctorSInfoViewController_Image_8.png"]];
+  label4.textColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
+  label4.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label4.textAlignment = UITextAlignmentLeft;
   label4.shadowOffset = CGSizeMake(0, -1);
   label4.font = [UIFont fontWithName:@".HelveticaNeueUI" size:17.0];
@@ -236,6 +244,9 @@
   if (tabBar.tag == 1 && item.tag == 3) {;
     [self didTap_tabBarItem3];
   };
+  if (tabBar.tag == 1 && item.tag == 4) {;
+    [self didTap_tabBarItem4];
+  };
 }
 
 
@@ -263,6 +274,11 @@
 }
 - (void)didTap_tabBarItem3 {
   MedicineListViewController *controller = [[MedicineListViewController alloc] init];
+  [self.navigationController pushViewController:controller animated:YES];
+  [controller release];
+}
+- (void)didTap_tabBarItem4 {
+  SettingsViewController *controller = [[SettingsViewController alloc] init];
   [self.navigationController pushViewController:controller animated:YES];
   [controller release];
 }

@@ -47,7 +47,7 @@
   navigationBar1.alpha = 1.0;
   navigationBar1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
   navigationBar1.barStyle = UIBarStyleDefault;
-  navigationBar1.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
+  navigationBar1.tintColor = [UIColor colorWithRed:0.5 green:0.25 blue:0.0 alpha:1.0];
   navigationBar1.topItem.title = @"Log Item List";
   [navigationBar1 setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
   
@@ -111,6 +111,7 @@
   tableViewCell1.textLabel.text = @"03/15/2013";
   tableViewCell1.detailTextLabel.text = @"08:00 AM";
   tableViewCell1.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+  tableViewCell1.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   [tableViewCell1Data setObject:tableViewCell1 forKey:@"cell"];
   [tableViewCell1Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
   [tableViewCell1Data setObject:[NSNumber numberWithInteger:0] forKey:@"indentationLevel"];

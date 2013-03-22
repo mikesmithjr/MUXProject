@@ -9,6 +9,9 @@
 #import "SettingsViewController.h"
 #import "EditPersonalInfoViewController.h"
 #import "EditDoctorSInfoViewController.h"
+#import "MainScreenViewController.h"
+#import "DoctorSInfoViewController.h"
+#import "MedicineListViewController.h"
 
 #import "GradientView.h"
 #import "MKMapView+ZoomLevel.h"
@@ -46,20 +49,10 @@
   navigationBar1.alpha = 1.0;
   navigationBar1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
   navigationBar1.barStyle = UIBarStyleDefault;
-  navigationBar1.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
+  navigationBar1.tintColor = [UIColor colorWithRed:0.5 green:0.25 blue:0.0 alpha:1.0];
   navigationBar1.topItem.title = @"Settings";
   [navigationBar1 setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
-  
-  // ----------------------------;
-  // Navigation Bar Lef Button -> barButton1;
-  // ----------------------------;
-  
-  UIBarButtonItem *barButton1 = [[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
-  barButton1.target = self;
-  barButton1.action = @selector(didTap_barButton1:forEvent:);
-  
-  navigationBar1.topItem.hidesBackButton = NO;
-  navigationBar1.backItem.backBarButtonItem = barButton1;
+  navigationBar1.topItem.hidesBackButton = YES;
   [navigationBar1 release];
   
   
@@ -75,9 +68,9 @@
   [contentView addSubview:tableView1];
   tableView1.alpha = 1.0;
   tableView1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-  tableView1.separatorStyle = UITableViewCellSeparatorStyleSingleLineEtched;
+  tableView1.separatorStyle = UITableViewCellSeparatorStyleNone;
   tableView1.separatorColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.18];
-  tableView1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"SettingsViewController_Image_2.png"]];
+  tableView1.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   [tableView1 release];
   
   
@@ -100,6 +93,7 @@
   tableViewCell1.textLabel.text = @"Edit Personal Info";
   tableViewCell1.detailTextLabel.text = @"Subtitle";
   tableViewCell1.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+  tableViewCell1.textLabel.textColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0];
   [tableViewCell1Data setObject:tableViewCell1 forKey:@"cell"];
   [tableViewCell1Data setObject:[NSNumber numberWithInteger:UITableViewCellEditingStyleDelete] forKey:@"editingStyle"];
   [tableViewCell1Data setObject:[NSNumber numberWithInteger:0] forKey:@"indentationLevel"];
@@ -208,6 +202,48 @@
   [tableViewCell6Data setObject:[NSNumber numberWithFloat:44] forKey:@"height"];
   [tableViewCell6Data setObject:[NSNumber numberWithBool:YES] forKey:@"showReorderControl"];
   [[tableViewSection3Data objectForKey:@"cells"] addObject:tableViewCell6Data];
+  
+  // ----------------------------;
+  // UITabBar -> tabBar1;
+  // ----------------------------;
+  
+  UITabBar *tabBar1 = [[UITabBar alloc] initWithFrame:CGRectMake(0, 411, 320, 49)];
+  tabBar1.tag = 1;
+  tabBar1.delegate = (id<UITabBarDelegate>)self;
+  [contentView addSubview:tabBar1];
+  tabBar1.alpha = 1.0;
+  tabBar1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+  [tabBar1 release];
+  
+  
+  // ----------------------------;
+  // Tab Bar Item -> tabBarItem1;
+  // ----------------------------;
+  
+  UITabBarItem *tabBarItem1 = [[[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"SettingsViewController_Image_2.png"] tag:1] autorelease];
+  
+  
+  // ----------------------------;
+  // Tab Bar Item -> tabBarItem2;
+  // ----------------------------;
+  
+  UITabBarItem *tabBarItem2 = [[[UITabBarItem alloc] initWithTitle:@"Doctor Info" image:[UIImage imageNamed:@"SettingsViewController_Image_3.png"] tag:2] autorelease];
+  
+  
+  // ----------------------------;
+  // Tab Bar Item -> tabBarItem3;
+  // ----------------------------;
+  
+  UITabBarItem *tabBarItem3 = [[[UITabBarItem alloc] initWithTitle:@"Med Info" image:[UIImage imageNamed:@"SettingsViewController_Image_4.png"] tag:3] autorelease];
+  
+  
+  // ----------------------------;
+  // Tab Bar Item -> tabBarItem4;
+  // ----------------------------;
+  
+  UITabBarItem *tabBarItem4 = [[[UITabBarItem alloc] initWithTitle:@"Settings" image:[UIImage imageNamed:@"SettingsViewController_Image_5.png"] tag:4] autorelease];
+  
+  tabBar1.items = [NSArray arrayWithObjects:tabBarItem1, tabBarItem2, tabBarItem3, tabBarItem4, nil];
   
   contentView.frame = self.view.bounds;
   [self.view addSubview:contentView];
@@ -374,11 +410,27 @@
 
 
 // ----------------
+// Tab Bar
+// ----------------
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+  if (tabBar.tag == 1 && item.tag == 1) {;
+    [self didTap_tabBarItem1];
+  };
+  if (tabBar.tag == 1 && item.tag == 2) {;
+    [self didTap_tabBarItem2];
+  };
+  if (tabBar.tag == 1 && item.tag == 3) {;
+    [self didTap_tabBarItem3];
+  };
+}
+
+
+// ----------------
 // Navigation Bar
 // ----------------
 
 - (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPopItem:(UINavigationItem *)item {
-  [self didTap_barButton1:nil forEvent:nil];
   return NO;
 }
 
@@ -386,9 +438,6 @@
 // Action
 // ----------------
 
-- (void)didTap_barButton1:(id)sender forEvent:(UIEvent *)event {
-  [self.navigationController popViewControllerAnimated:YES];
-}
 - (void)didTap_tableViewCell1:(UIView *)cell {
   EditPersonalInfoViewController *controller = [[EditPersonalInfoViewController alloc] init];
   [self.navigationController pushViewController:controller animated:YES];
@@ -396,6 +445,21 @@
 }
 - (void)didTap_tableViewCell2:(UIView *)cell {
   EditDoctorSInfoViewController *controller = [[EditDoctorSInfoViewController alloc] init];
+  [self.navigationController pushViewController:controller animated:YES];
+  [controller release];
+}
+- (void)didTap_tabBarItem1 {
+  MainScreenViewController *controller = [[MainScreenViewController alloc] init];
+  [self.navigationController pushViewController:controller animated:YES];
+  [controller release];
+}
+- (void)didTap_tabBarItem2 {
+  DoctorSInfoViewController *controller = [[DoctorSInfoViewController alloc] init];
+  [self.navigationController pushViewController:controller animated:YES];
+  [controller release];
+}
+- (void)didTap_tabBarItem3 {
+  MedicineListViewController *controller = [[MedicineListViewController alloc] init];
   [self.navigationController pushViewController:controller animated:YES];
   [controller release];
 }

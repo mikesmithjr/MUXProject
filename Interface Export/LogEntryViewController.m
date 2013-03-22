@@ -25,7 +25,7 @@
   // View Controller Root View;
   // ----------------------------;
   
-  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LogEntryViewController_Image_1.png"]];
+  self.view.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
   contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   
@@ -43,7 +43,7 @@
   navigationBar1.alpha = 1.0;
   navigationBar1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
   navigationBar1.barStyle = UIBarStyleDefault;
-  navigationBar1.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
+  navigationBar1.tintColor = [UIColor colorWithRed:0.5 green:0.25 blue:0.0 alpha:1.0];
   navigationBar1.topItem.title = @"Log Entry";
   [navigationBar1 setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
   
@@ -70,7 +70,7 @@
   label1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   label1.text = @"Today's Date:";
   label1.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LogEntryViewController_Image_2.png"]];
+  label1.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label1.textAlignment = UITextAlignmentLeft;
   label1.shadowOffset = CGSizeMake(0, -1);
   label1.font = [UIFont fontWithName:@".HelveticaNeueUI" size:17.0];
@@ -87,7 +87,7 @@
   label2.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   label2.text = @"Current Time:";
   label2.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label2.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LogEntryViewController_Image_3.png"]];
+  label2.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label2.textAlignment = UITextAlignmentLeft;
   label2.shadowOffset = CGSizeMake(0, -1);
   label2.font = [UIFont fontWithName:@".HelveticaNeueUI" size:17.0];
@@ -104,7 +104,7 @@
   label3.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   label3.text = @"Reason for Entry:";
   label3.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label3.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LogEntryViewController_Image_4.png"]];
+  label3.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label3.textAlignment = UITextAlignmentLeft;
   label3.shadowOffset = CGSizeMake(0, -1);
   label3.font = [UIFont fontWithName:@".HelveticaNeueUI" size:17.0];
@@ -148,11 +148,11 @@
   // UITextField -> textField2;
   // ----------------------------;
   
-  UITextField *textField2 = [[UITextField alloc] initWithFrame:CGRectMake(25, 159, 180, 31)];
+  UITextField *textField2 = [[UITextField alloc] initWithFrame:CGRectMake(25, 232, 197, 31)];
   [contentView addSubview:textField2];
   textField2.alpha = 1.0;
   textField2.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-  textField2.text = @"11:00 AM";
+  textField2.text = @"Scheduled";
   textField2.borderStyle = UITextBorderStyleRoundedRect;
   textField2.textAlignment = UITextAlignmentLeft;
   textField2.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
@@ -165,11 +165,11 @@
   // UITextField -> textField3;
   // ----------------------------;
   
-  UITextField *textField3 = [[UITextField alloc] initWithFrame:CGRectMake(25, 232, 197, 31)];
+  UITextField *textField3 = [[UITextField alloc] initWithFrame:CGRectMake(25, 159, 180, 31)];
   [contentView addSubview:textField3];
   textField3.alpha = 1.0;
   textField3.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-  textField3.text = @"Scheduled";
+  textField3.text = @"11:00 AM";
   textField3.borderStyle = UITextBorderStyleRoundedRect;
   textField3.textAlignment = UITextAlignmentLeft;
   textField3.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
@@ -188,7 +188,7 @@
   label4.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   label4.text = @"Comments:";
   label4.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label4.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LogEntryViewController_Image_5.png"]];
+  label4.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label4.textAlignment = UITextAlignmentLeft;
   label4.shadowOffset = CGSizeMake(0, -1);
   label4.font = [UIFont fontWithName:@".HelveticaNeueUI" size:17.0];

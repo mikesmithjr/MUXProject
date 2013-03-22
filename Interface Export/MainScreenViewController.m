@@ -7,6 +7,7 @@
 //
 
 #import "MainScreenViewController.h"
+#import "LogInViewController.h"
 #import "LogEntryViewController.h"
 #import "LogListViewController.h"
 #import "DoctorSInfoViewController.h"
@@ -30,7 +31,7 @@
   // View Controller Root View;
   // ----------------------------;
   
-  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"MainScreenViewController_Image_1.png"]];
+  self.view.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
   contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   
@@ -48,40 +49,34 @@
   navigationBar1.alpha = 1.0;
   navigationBar1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
   navigationBar1.barStyle = UIBarStyleDefault;
-  navigationBar1.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
+  navigationBar1.tintColor = [UIColor colorWithRed:0.5 green:0.25 blue:0.0 alpha:1.0];
   navigationBar1.topItem.title = @"Diabetic's Log";
   [navigationBar1 setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
   navigationBar1.topItem.hidesBackButton = YES;
+  
+  // ----------------------------;
+  // Navigation Bar Right Button -> barButton1;
+  // ----------------------------;
+  
+  UIBarButtonItem *barButton1 = [[[UIBarButtonItem alloc] initWithTitle:@"Log In" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
+  barButton1.target = self;
+  barButton1.action = @selector(didTap_barButton1:forEvent:);
+  
+  navigationBar1.topItem.rightBarButtonItem = barButton1;
   [navigationBar1 release];
-  
-  
-  // ----------------------------;
-  // UIButton -> imageButton1;
-  // ----------------------------;
-  
-  UIButton *imageButton1 = [UIButton buttonWithType:UIButtonTypeCustom];
-  imageButton1.frame = CGRectMake(19, 77, 114, 114);
-  [contentView addSubview:imageButton1];
-  imageButton1.alpha = 1.0;
-  imageButton1.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-  [imageButton1 setTitle:@"" forState:UIControlStateNormal];
-  [imageButton1 setImage:[UIImage imageNamed:@"MainScreenViewController_Image_2.png"] forState:UIControlStateNormal];
-  imageButton1.enabled = YES;
-  [imageButton1 setTitleColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0] forState:UIControlStateNormal];
-  [imageButton1 addTarget:self action:@selector(didTap_imageButton1:forEvent:) forControlEvents:UIControlEventTouchUpInside];
   
   
   // ----------------------------;
   // UILabel -> label1;
   // ----------------------------;
   
-  UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(22, 191, 108, 34)];
+  UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(106, 191, 108, 34)];
   [contentView addSubview:label1];
   label1.alpha = 1.0;
   label1.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   label1.text = @"New Log Entry";
   label1.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label1.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"MainScreenViewController_Image_3.png"]];
+  label1.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   label1.textAlignment = UITextAlignmentCenter;
   label1.shadowOffset = CGSizeMake(0, -1);
   label1.font = [UIFont fontWithName:@".HelveticaNeueUI" size:15.0];
@@ -89,20 +84,19 @@
   
   
   // ----------------------------;
-  // UILabel -> label2;
+  // UIButton -> imageButton1;
   // ----------------------------;
   
-  UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(116, 362, 88, 31)];
-  [contentView addSubview:label2];
-  label2.alpha = 1.0;
-  label2.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-  label2.text = @"Settings";
-  label2.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label2.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"MainScreenViewController_Image_4.png"]];
-  label2.textAlignment = UITextAlignmentCenter;
-  label2.shadowOffset = CGSizeMake(0, -1);
-  label2.font = [UIFont fontWithName:@".HelveticaNeueUI" size:15.0];
-  [label2 release];
+  UIButton *imageButton1 = [UIButton buttonWithType:UIButtonTypeCustom];
+  imageButton1.frame = CGRectMake(103, 77, 114, 114);
+  [contentView addSubview:imageButton1];
+  imageButton1.alpha = 1.0;
+  imageButton1.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+  [imageButton1 setTitle:@"" forState:UIControlStateNormal];
+  [imageButton1 setImage:[UIImage imageNamed:@"MainScreenViewController_Image_1.png"] forState:UIControlStateNormal];
+  imageButton1.enabled = YES;
+  [imageButton1 setTitleColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0] forState:UIControlStateNormal];
+  [imageButton1 addTarget:self action:@selector(didTap_imageButton1:forEvent:) forControlEvents:UIControlEventTouchUpInside];
   
   
   // ----------------------------;
@@ -110,32 +104,32 @@
   // ----------------------------;
   
   UIButton *imageButton2 = [UIButton buttonWithType:UIButtonTypeCustom];
-  imageButton2.frame = CGRectMake(184, 77, 114, 114);
+  imageButton2.frame = CGRectMake(103, 245, 114, 114);
   [contentView addSubview:imageButton2];
   imageButton2.alpha = 1.0;
   imageButton2.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
   [imageButton2 setTitle:@"" forState:UIControlStateNormal];
-  [imageButton2 setImage:[UIImage imageNamed:@"MainScreenViewController_Image_5.png"] forState:UIControlStateNormal];
+  [imageButton2 setImage:[UIImage imageNamed:@"MainScreenViewController_Image_2.png"] forState:UIControlStateNormal];
   imageButton2.enabled = YES;
   [imageButton2 setTitleColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0] forState:UIControlStateNormal];
   [imageButton2 addTarget:self action:@selector(didTap_imageButton2:forEvent:) forControlEvents:UIControlEventTouchUpInside];
   
   
   // ----------------------------;
-  // UILabel -> label3;
+  // UILabel -> label2;
   // ----------------------------;
   
-  UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(187, 191, 108, 34)];
-  [contentView addSubview:label3];
-  label3.alpha = 1.0;
-  label3.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-  label3.text = @"Log Entry List";
-  label3.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
-  label3.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"MainScreenViewController_Image_6.png"]];
-  label3.textAlignment = UITextAlignmentCenter;
-  label3.shadowOffset = CGSizeMake(0, -1);
-  label3.font = [UIFont fontWithName:@".HelveticaNeueUI" size:15.0];
-  [label3 release];
+  UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(106, 359, 108, 34)];
+  [contentView addSubview:label2];
+  label2.alpha = 1.0;
+  label2.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+  label2.text = @"Log Entry List";
+  label2.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+  label2.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
+  label2.textAlignment = UITextAlignmentCenter;
+  label2.shadowOffset = CGSizeMake(0, -1);
+  label2.font = [UIFont fontWithName:@".HelveticaNeueUI" size:15.0];
+  [label2 release];
   
   
   // ----------------------------;
@@ -155,39 +149,30 @@
   // Tab Bar Item -> tabBarItem1;
   // ----------------------------;
   
-  UITabBarItem *tabBarItem1 = [[[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"MainScreenViewController_Image_7.png"] tag:1] autorelease];
+  UITabBarItem *tabBarItem1 = [[[UITabBarItem alloc] initWithTitle:@"Home" image:[UIImage imageNamed:@"MainScreenViewController_Image_3.png"] tag:1] autorelease];
   
   
   // ----------------------------;
   // Tab Bar Item -> tabBarItem2;
   // ----------------------------;
   
-  UITabBarItem *tabBarItem2 = [[[UITabBarItem alloc] initWithTitle:@"Doctor Info" image:[UIImage imageNamed:@"MainScreenViewController_Image_8.png"] tag:2] autorelease];
+  UITabBarItem *tabBarItem2 = [[[UITabBarItem alloc] initWithTitle:@"Doctor Info" image:[UIImage imageNamed:@"MainScreenViewController_Image_4.png"] tag:2] autorelease];
   
   
   // ----------------------------;
   // Tab Bar Item -> tabBarItem3;
   // ----------------------------;
   
-  UITabBarItem *tabBarItem3 = [[[UITabBarItem alloc] initWithTitle:@"Med List" image:[UIImage imageNamed:@"MainScreenViewController_Image_9.png"] tag:3] autorelease];
+  UITabBarItem *tabBarItem3 = [[[UITabBarItem alloc] initWithTitle:@"Med List" image:[UIImage imageNamed:@"MainScreenViewController_Image_5.png"] tag:3] autorelease];
   
-  tabBar1.items = [NSArray arrayWithObjects:tabBarItem1, tabBarItem2, tabBarItem3, nil];
   
   // ----------------------------;
-  // UIButton -> imageButton3;
+  // Tab Bar Item -> tabBarItem4;
   // ----------------------------;
   
-  UIButton *imageButton3 = [UIButton buttonWithType:UIButtonTypeCustom];
-  imageButton3.frame = CGRectMake(103, 248, 114, 114);
-  [contentView addSubview:imageButton3];
-  imageButton3.alpha = 1.0;
-  imageButton3.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-  [imageButton3 setTitle:@"" forState:UIControlStateNormal];
-  [imageButton3 setImage:[UIImage imageNamed:@"MainScreenViewController_Image_10.png"] forState:UIControlStateNormal];
-  imageButton3.enabled = YES;
-  [imageButton3 setTitleColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0] forState:UIControlStateNormal];
-  [imageButton3 addTarget:self action:@selector(didTap_imageButton3:forEvent:) forControlEvents:UIControlEventTouchUpInside];
+  UITabBarItem *tabBarItem4 = [[[UITabBarItem alloc] initWithTitle:@"Settings" image:[UIImage imageNamed:@"MainScreenViewController_Image_6.png"] tag:4] autorelease];
   
+  tabBar1.items = [NSArray arrayWithObjects:tabBarItem1, tabBarItem2, tabBarItem3, tabBarItem4, nil];
   
   contentView.frame = self.view.bounds;
   [self.view addSubview:contentView];
@@ -223,6 +208,9 @@
   if (tabBar.tag == 1 && item.tag == 3) {;
     [self didTap_tabBarItem3];
   };
+  if (tabBar.tag == 1 && item.tag == 4) {;
+    [self didTap_tabBarItem4];
+  };
 }
 
 
@@ -238,6 +226,11 @@
 // Action
 // ----------------
 
+- (void)didTap_barButton1:(id)sender forEvent:(UIEvent *)event {
+  LogInViewController *controller = [[LogInViewController alloc] init];
+  [self.navigationController pushViewController:controller animated:YES];
+  [controller release];
+}
 - (void)didTap_imageButton1:(id)sender forEvent:(UIEvent *)event {
   LogEntryViewController *controller = [[LogEntryViewController alloc] init];
   [self.navigationController pushViewController:controller animated:YES];
@@ -266,7 +259,7 @@
   [self.navigationController pushViewController:controller animated:YES];
   [controller release];
 }
-- (void)didTap_imageButton3:(id)sender forEvent:(UIEvent *)event {
+- (void)didTap_tabBarItem4 {
   SettingsViewController *controller = [[SettingsViewController alloc] init];
   [self.navigationController pushViewController:controller animated:YES];
   [controller release];

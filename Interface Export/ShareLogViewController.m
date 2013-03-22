@@ -25,7 +25,7 @@
   // View Controller Root View;
   // ----------------------------;
   
-  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ShareLogViewController_Image_1.png"]];
+  self.view.backgroundColor = [UIColor colorWithRed:0.0 green:0.5 blue:0.5 alpha:1.0];
   UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
   contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
   
@@ -43,7 +43,7 @@
   navigationBar1.alpha = 1.0;
   navigationBar1.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
   navigationBar1.barStyle = UIBarStyleDefault;
-  navigationBar1.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0];
+  navigationBar1.tintColor = [UIColor colorWithRed:0.5 green:0.25 blue:0.0 alpha:1.0];
   navigationBar1.topItem.title = @"Share Log";
   [navigationBar1 setTitleVerticalPositionAdjustment:0.0 forBarMetrics:UIBarMetricsDefault];
   
